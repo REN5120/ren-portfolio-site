@@ -1,0 +1,492 @@
+/*-------------------------------- 
+   CSS Reset
+---------------------------------*/
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+/*-------------------------------- 
+   Variables
+---------------------------------*/
+:root {
+   
+   /*色*/
+   --color-base: #0F172A;
+   --color-main: #3F63C8;
+   --color-accent: #8AB4FF;
+   --color-white: #F8FAFC;
+
+   /*フォントサイズ*/
+   --font-small: 1rem;
+   --font-medium: 1.5rem;
+   --font-large: 2rem;
+
+}
+
+/*-------------------------------- 
+   Base Styles
+---------------------------------*/
+
+body{
+   font-family: "Noto Serif", serif;
+   font-weight: 400;
+   font-size: var(--font-small);
+   line-height: 1.7;
+   color: var(--color-base);
+}
+
+img{
+   max-width: 100%;
+   display: block;
+}
+
+section{
+   padding: 4rem 0rem;
+}
+
+.section-title{
+   text-align: center;
+}
+.section-title h2{
+   font-size:1.2rem;
+   font-weight: 400;
+}
+.section-title p{
+   font-size: 0.8rem;
+}
+
+.container{
+   width: 100%;
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 0 1.5rem;
+}
+
+.text-center{
+   text-align: center;
+}
+
+/*-------------------------------- 
+   Header Styles 
+---------------------------------*/
+
+.header{
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 0.5rem;
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 100;
+   background-color: rgba(255, 255, 255, 0.8);
+}
+
+/*-------------------------------- 
+   Logo Styles
+---------------------------------*/
+
+.logo img{
+   width: 40px;
+}
+
+/*-------------------------------- 
+   Navigation Styles
+---------------------------------*/
+
+.hamburger{
+   width: 40px;
+   height: 40px;
+   background-color: transparent;
+   border: none;
+}
+
+.hamburger span{
+   display: block;
+   width: 24px;
+   height: 2px;
+   background-color: var(--color-base);
+   margin: 5px auto;
+   transition: 0.3s;
+}
+
+/*-------------------------------- 
+   hamburger animation Styles
+---------------------------------*/
+
+.hamburger.active span:nth-child(1){
+   transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2){
+   opacity: 0;
+}
+
+.hamburger.active span:nth-child(3){
+   transform: translateY(-7px) rotate(-45deg);
+}
+
+/*-------------------------------- 
+   Navigation Styles
+---------------------------------*/
+
+.nav{
+   display: none;
+   position: absolute;
+   top: 100%;
+   left: 0;
+   width: 100%;
+   background-color: var(--color-white);
+}
+
+.nav.active{
+   display: block;
+}
+
+.nav ul{
+   list-style: none;
+}
+
+.nav a{
+   display: block;
+   padding: 1rem;
+   color: var(--color-base);
+   text-decoration: none;
+}
+
+/*-------------------------------- 
+   Hero Styles
+---------------------------------*/
+.hero{
+   min-height: 100vh;
+   background-image:url("../../3_素材/仮置き画像.png");
+   background-size: cover;
+   background-position: center;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   padding: 2rem 1rem;
+   padding-top: 1rem; /* ヘッダーの高さ分の余白を追加 */
+}
+
+.hero h1{
+   font-size: var(--font-large);
+   letter-spacing: 0.5em;
+}
+
+.hero-buttons{
+   margin-top: 2rem;
+}
+
+.btn{
+   display: inline-block;
+   padding: 0.8rem 2rem;
+   background-color: var(--color-accent);
+   color: black;
+   text-decoration: none;
+   border-radius: 999px;
+   margin: 0.5rem;
+}
+
+/*-------------------------------- 
+   Value Styles
+---------------------------------*/
+.value-list{
+   margin-top: 3rem;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.value-item{
+   position: relative;
+   width: 100%;
+   max-width: 350px;
+}
+
+.value-item:not(:last-child){
+   margin-bottom: 2rem;
+}
+
+.number{
+   position: absolute;
+   top: -55px;
+   left: -15px;
+   font-size: 5rem;
+   color: var(--color-accent);
+   opacity:0.3;
+   font-style: italic;
+   z-index: 0;
+}
+
+.value-content{
+   position: relative;
+   z-index: 1;
+   text-align: center;
+}
+
+.value-item h3{
+   font-size: var(--font-medium);
+   margin-top: 0.5rem;
+   line-height: 1.4;
+}
+
+.value-item p{
+   text-align: left;
+   width: 90%;
+   margin: 0.5rem auto 0;
+   font-size: 0.9rem;
+}
+
+/*-------------------------------- 
+   About Styles
+---------------------------------*/
+.about-content{
+   margin-top: 3rem;
+}
+
+.about-image{
+   width: 80px;
+   height: 80px;
+   border-radius: 50%;
+   margin:0 auto;
+}
+
+.about-content p{
+   margin-top: 1rem;
+}
+
+/*-------------------------------- 
+   Service Styles
+---------------------------------*/
+.service-list{
+   display:flex;
+   flex-direction:column;
+   align-items:center;
+   margin-top: 2rem;
+}
+
+.service-card{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+   width: 100%;
+   max-width: 300px;
+   padding: 0.5rem 1rem;
+   margin-bottom: 1.5rem;
+   background-color: var(--color-white);
+   box-shadow:3px 6px 10px rgba(15,23,42,0.08);
+}
+
+/*-------------------------------- 
+   Works Styles
+---------------------------------*/
+.works-list{
+   margin-top: 3rem;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 2rem;
+}
+
+.works-card{
+   width: 100%;
+   max-width: 320px;
+   background-color: var(--color-white);
+   border-radius: 20px;
+   overflow: hidden;
+   box-shadow: 3px 6px 10px rgba(15,23,42,0.08);
+}
+
+.works-thumbnail img{
+   width: 100%;
+   aspect-ratio: 16/9;
+   object-fit: cover;
+}
+
+.works-content{
+   padding: 1.5rem;
+   text-align: center;
+}
+
+.works-content h3{
+   font-size: var(--font-medium);
+}
+
+.works-content p{
+   margin: 0.5rem;
+   font-size: 0.9rem;
+}
+
+.works-button{
+   margin-top: 1rem;
+   padding: 0.7rem 1.5rem;
+   border: none;
+   border-radius: 30px;
+   background-color: var(--color-accent);
+   color: black;
+   cursor: pointer;
+}
+
+/*-------------------------------- 
+   Price Styles
+---------------------------------*/
+.price-list{
+   margin-top:3rem; ;
+}
+
+.price-item{
+   width: 100%;
+   max-width: 320px;
+   margin: 0 auto 1.5rem;
+   margin-bottom: 1rem;
+}
+
+.price-title{
+   width: 100%;
+   padding: 0.5rem 1rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: var(--color-main);
+   border: none;
+   font-size: 1.1rem;
+   color: var(--color-white);
+   box-shadow: 3px 6px 10px rgba(15,23,42,0.08);
+}
+
+.price-content{
+   padding: 1.5rem;
+   text-align: left;
+}
+
+.price-value{
+   font-size: var(--font-medium);
+   font-weight: bold;
+   color: var(--color-main);
+}
+
+.price-content ul{
+   margin-top: 1rem;
+   padding-left: 1.2rem;
+}
+
+/*-------------------------------- 
+   Flow Styles
+---------------------------------*/
+.flow-list{
+   margin-top: 3rem;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.flow-item{
+   display: flex;
+   gap: 1.5rem;
+   align-items: flex-start;
+   width: 100%;
+   max-width: 350px;
+   margin-bottom: 2.5rem;
+}
+
+.flow-number{
+   font-size: 2rem;
+   color: var(--color-accent);
+   font-weight: bold;
+}
+
+.flow-content h3{
+   font-size: var(--font-medium);
+}
+
+.flow-content p{
+   margin-top: 0.5rem;
+   font-size: 0.9rem;
+}
+
+/*-------------------------------- 
+   Contact Styles
+---------------------------------*/
+.contact-box{
+   margin-top: 3rem;
+   padding: 3rem 1.5rem;
+   text-align: center;
+   background-color: var(--color-main);
+   color: white;
+}
+
+.contact-box p{
+   font-size: var(--font-medium);
+}
+
+.contact-button{
+   display: inline-block;
+   margin-top: 2rem;
+   padding: 0.8rem 2rem;
+   background-color: white;
+   color: var(--color-main);
+   text-decoration: none;
+}
+
+/*-------------------------------- 
+   Footer Styles
+---------------------------------*/
+
+
+.footer{
+   padding:3rem 1rem;
+   background-color:var(--color-base);
+   color:var(--color-white);
+}
+
+.footer-logo{
+   text-align:center;
+   margin-bottom: 2rem;
+}
+
+.footer-logo a{
+   color:var(--color-white);
+   text-decoration:none;
+   font-size:var(--font-medium);
+   font-weight:bold;
+}
+
+
+
+.footer-nav{
+   margin-top:2rem;
+}
+
+
+
+.footer-nav ul{
+   list-style:none;
+   display:flex;
+   justify-content: center;
+   align-items:center;
+   gap:1rem;
+   flex-wrap: wrap;
+}
+
+
+
+.footer-nav a{
+   font-size: 0.9rem;
+   color:var(--color-white);
+   text-decoration:none;
+}
+
+
+
+.copyright{
+   margin-top:2rem;
+   text-align:center;
+   font-size:0.8rem;
+   opacity:0.8;
+}
