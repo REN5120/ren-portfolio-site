@@ -1,3 +1,5 @@
+/*hannburger menu*/
+
 const hamburger = document.getElementById("hamburger");
 const nav = document.getElementById("nav");
 
@@ -21,5 +23,15 @@ navLinks.forEach(function (link) {
          
          nav.classList.remove("active");
          hamburger.classList.remove("active");
+      });
+});
+
+// price Accordion
+const priceTitles = document.querySelectorAll(".price-title");
+
+priceTitles.forEach(function (title) {
+      title.addEventListener("click", function () {
+         const priceItem = title.parentElement;
+         priceItem.classList.toggle("active");
       });
 });
