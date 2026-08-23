@@ -352,7 +352,7 @@ section{
    display: flex;
    justify-content: center;
    align-items: center;
-   transition: opacity 0.75s ease,;
+   transition: opacity 0.75s ease;
    z-index: 1000;
 }
 
@@ -378,7 +378,7 @@ section{
    border-radius: 12px;
 }
 
-.works-modal-close{
+.works-close{
    position: absolute;
    top: -40px;
    right: 0;

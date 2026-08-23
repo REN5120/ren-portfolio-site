@@ -148,11 +148,16 @@
                             <h4>桜良春花</h4>
                             <p>MV制作</p>
                             <button class="works-button"
-                            data-video="https://youtu.be/UWo_7vcf3qk?si=ShtH_1SO5KjmxkF7">
+                            data-video="https://youtu.be/UWo_7vcf3qk?si=ShtH_1SO5KjmxkF7"
+                            data-title="雨晴日傘"
+                            data-artist="桜良春花"
+                            data-type="MV制作"
+                            data-concept="楽曲の世界観を映像で表現するために、雨の日の情景や傘のモチーフを取り入れた映像演出を行いました。">
                                 詳細を見る
                             </button>
                         </div>
                     </article>
+
                     <article class="works-card">
                         <!-- 作品2 -->
                         <div class="works-thumbnail">
@@ -166,6 +171,7 @@
                             <button class="works-button">詳細を見る</button>
                         </div>
                     </article>
+
                     <article class="works-card">
                         <!-- 作品3 -->
                         <div class="works-thumbnail">
@@ -183,16 +189,26 @@
         </section>
 
         <!--works モーダル -->
-        <div class="works-modal" id="works-Modal">
+        <div class="works-modal" id="worksModal">
             <div class="works-modal-content">
-                <button class="works-close" id="works-close">
+                <button class="works-close" id="worksModalClose">
                     ✕
                 </button>
-                <iframe id="works-Video" 
+                <iframe id="worksModalVideo" 
                 src=""
                 frameborder="0"
                 allowfullscreen>
                 </iframe>
+                <div class="works-detail">
+                    <h3 id="worksModalTitle"></h3>
+                    <h4 id="worksModalArtist"></h4>
+                    <div class="modal-info">
+                        <h5>制作範囲</h5>
+                        <p id="worksModalType"></p>
+                        <h5>こだわり</h5>
+                        <p id="worksModalConcept"></p>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -319,7 +335,9 @@
                     <p>
                         あなたの活動を<br>一緒に形にしませんか？
                     </p>
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfgUYX8xbJubvvgrMoDBVMhmskmJ-CMpIJSRTXx2bkTykKz4A/viewform?usp=dialog" class="contact-button">
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfgUYX8xbJubvvgrMoDBVMhmskmJ-CMpIJSRTXx2bkTykKz4A/viewform?usp=dialog" class="contact-button"
+                    target="_blank"
+                    rel="noopener noreferrer">
                         お問い合わせはこちら
                     </a>
                 </div>
