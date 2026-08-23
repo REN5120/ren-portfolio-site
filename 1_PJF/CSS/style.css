@@ -5,6 +5,7 @@
    margin: 0;
    padding: 0;
    box-sizing: border-box;
+   font-weight: 400;
 }
 
 /*-------------------------------- 
@@ -316,6 +317,13 @@ section{
 
 .works-content h3{
    font-size: var(--font-medium);
+   line-height: 1.3;
+}
+
+.works-content h4{
+   font-size: var(--font-small);
+   font-weight: 400;
+   line-height: 1.3;
 }
 
 .works-content p{
@@ -331,6 +339,58 @@ section{
    background-color: var(--color-accent);
    color: black;
    cursor: pointer;
+}
+
+/*Works Modal Styles*/
+
+.works-modal{
+   opacity: 0;
+   visibility: hidden;
+   position: fixed;
+   inset: 0;
+   background-color: rgba(0, 0, 0, 0.7);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   transition: opacity 0.75s ease,;
+   z-index: 1000;
+}
+
+.works-modal.active{
+   opacity: 1;
+   visibility: visible;
+}
+
+.works-modal-content{
+   transform: scale(0.9);
+   transition: transform 0.75s ease;
+   position: relative;
+   width: 90%;
+   max-width: 900px;
+   background-color: var(--color-white);
+   padding: 1rem;
+   border-radius: 12px;
+}
+
+.works-modal-content iframe{
+   width: 100%;
+   aspect-ratio: 16/9;
+   border-radius: 12px;
+}
+
+.works-modal-close{
+   position: absolute;
+   top: -40px;
+   right: 0;
+   border: none;
+   background:none;
+   color: var(--color-white);
+   font-size: 2rem;
+   cursor: pointer;
+}
+
+.works-modal.active .works-modal-content{
+   transform: scale(1);
 }
 
 /*-------------------------------- 
@@ -405,7 +465,7 @@ section{
 
 .price-value{
    font-size: var(--font-medium);
-   font-weight: bold;
+   font-weight: 400;
    color: var(--color-main);
 }
 
@@ -442,7 +502,7 @@ section{
 .flow-number{
    font-size: 2rem;
    color: var(--color-accent);
-   font-weight: bold;
+   font-weight: 400;
 }
 
 .flow-content h3{
@@ -498,7 +558,7 @@ section{
    color:var(--color-white);
    text-decoration:none;
    font-size:var(--font-medium);
-   font-weight:bold;
+   font-weight:400;
 }
 
 
