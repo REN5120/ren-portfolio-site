@@ -162,7 +162,7 @@ section{
 ---------------------------------*/
 .hero{
    min-height: 100vh;
-   background-image:url("../../3_素材/仮置き画像.png");
+   background-image:url("../../images/背景画像.png");
    background-size: cover;
    background-position: center;
    display: flex;
