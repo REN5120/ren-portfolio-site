@@ -76,7 +76,7 @@ modal.addEventListener("click", function (e) {
 });
 
 // Header
-fetch("/components/header.html")
+fetch("/1_PJF/components/header.html")
 .then(response => response.text())
 .then(data => {
     document.getElementById("header").innerHTML = data;
@@ -84,7 +84,7 @@ fetch("/components/header.html")
 
 
 // Footer
-fetch("/components/footer.html")
+fetch("/1_PJF/components/footer.html")
 .then(response => response.text())
 .then(data => {
     document.getElementById("footer").innerHTML = data;
