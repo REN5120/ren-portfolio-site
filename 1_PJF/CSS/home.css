@@ -1,0 +1,278 @@
+/*-------------------------------- 
+   Hero Styles
+---------------------------------*/
+.hero{
+   position: relative;
+   overflow: hidden;
+   min-height: 100vh;
+   background-image:url("");
+   background-size: cover;
+   background-position: center;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   padding: 2rem 1rem;
+   padding-top: 1rem; /* ヘッダーの高さ分の余白を追加 */
+}
+
+.hero-ink{
+   position: absolute;
+   z-index: 0;
+   pointer-events: none;
+}
+
+.hero-ink-top{
+   width: 1000px;
+   top: -0px;
+   right: -150px;
+   opacity: 0.6;
+   transform: rotate(180deg);
+}
+
+.hero-ink-bottom{
+   width: 1000px;
+   bottom: -0px;
+   left: -150px;
+   opacity: 0.7;
+}
+
+.hero-content{
+   position: relative;
+   z-index: 1;
+}
+
+.hero-logo-bg{
+   position: absolute;
+   width: 300px;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   opacity: 0.1;
+   z-index: 0;
+}
+
+.hero h1{
+   font-size: var(--font-large);
+   letter-spacing: 0.5em;
+}
+
+.hero-buttons{
+   margin-top: 2rem;
+}
+
+
+
+/*-------------------------------- 
+   Value Styles
+---------------------------------*/
+.value-list{
+   margin-top: 3rem;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.value-item{
+   position: relative;
+   width: 100%;
+   max-width: 350px;
+}
+
+.value-item:not(:last-child){
+   margin-bottom: 2rem;
+}
+
+.number{
+   position: absolute;
+   top: -55px;
+   left: -15px;
+   font-size: 5rem;
+   color: var(--color-accent);
+   opacity:0.3;
+   font-style: italic;
+   z-index: 0;
+}
+
+.value-content{
+   position: relative;
+   z-index: 1;
+   text-align: center;
+}
+
+.value-item h3{
+   font-size: var(--font-medium);
+   margin-top: 0.5rem;
+   line-height: 1.4;
+}
+
+.value-item p{
+   text-align: left;
+   width: 90%;
+   margin: 0.5rem auto 0;
+   font-size: 0.9rem;
+}
+
+/*-------------------------------- 
+   About Styles
+---------------------------------*/
+.about-content{
+   margin-top: 3rem;
+}
+
+.about-image{
+   width: 110px;
+   height: 110px;
+   border-radius: 50%;
+   margin:0 auto;
+   object-fit: cover;
+   box-shadow: 3px 6px 10px rgba(15,23,42,0.08);
+}
+
+.about-content p{
+   margin-top: 1.5rem;
+}
+
+/*-------------------------------- 
+   Service Styles
+---------------------------------*/
+.service-list{
+   display:flex;
+   flex-direction:column;
+   align-items:center;
+   margin-top: 2rem;
+}
+
+.service-card{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+   width: 100%;
+   max-width: 300px;
+   padding: 0.5rem 1rem;
+   margin-bottom: 1.5rem;
+   background-color: var(--color-white);
+   box-shadow:3px 6px 10px rgba(15,23,42,0.08);
+}
+
+/*-------------------------------- 
+   Works Styles
+---------------------------------*/
+.works-list{
+   margin-top: 3rem;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 2rem;
+}
+
+.works-thumbnail img{
+   width: 100%;
+   aspect-ratio: 16/9;
+   object-fit: cover;
+}
+
+.works-content{
+   padding: 1.5rem;
+   text-align: center;
+}
+
+.works-content h3{
+   font-size: var(--font-medium);
+   line-height: 1.3;
+}
+
+.works-content h4{
+   font-size: var(--font-small);
+   font-weight: 400;
+   line-height: 1.3;
+}
+
+.works-content p{
+   margin: 0.5rem;
+   font-size: 0.9rem;
+}
+
+/*-------------------------------- 
+   Price Styles
+---------------------------------*/
+.price-list{
+   margin-top:3rem; ;
+}
+
+.price-item{
+   width: 100%;
+   max-width: 320px;
+   margin: 0 auto 1.5rem;
+   margin-bottom: 1rem;
+}
+
+.price-value{
+   font-size: var(--font-medium);
+   font-weight: 400;
+   color: var(--color-main);
+}
+
+.price-content ul{
+   margin-top: 1rem;
+   padding-left: 1.2rem;
+}
+
+/*-------------------------------- 
+   Flow Styles
+---------------------------------*/
+.flow-list{
+   margin-top: 3rem;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.flow-item{
+   display: flex;
+   gap: 1.5rem;
+   align-items: flex-start;
+   width: 100%;
+   max-width: 350px;
+   margin-bottom: 2.5rem;
+}
+
+.flow-number{
+   font-size: 2rem;
+   color: var(--color-accent);
+   font-weight: 400;
+}
+
+.flow-content h3{
+   font-size: var(--font-medium);
+}
+
+.flow-content p{
+   margin-top: 0.5rem;
+   font-size: 0.9rem;
+}
+
+/*-------------------------------- 
+   Contact Styles
+---------------------------------*/
+.contact-box{
+   margin-top: 3rem;
+   padding: 3rem 1.5rem;
+   text-align: center;
+   background-color: var(--color-main);
+   color: white;
+}
+
+.contact-box p{
+   font-size: var(--font-medium);
+}
+
+.contact-button{
+   display: inline-block;
+   margin-top: 2rem;
+   padding: 0.8rem 2rem;
+   background-color: white;
+   color: var(--color-main);
+   text-decoration: none;
+}

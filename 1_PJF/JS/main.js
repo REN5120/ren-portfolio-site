@@ -27,50 +27,65 @@ navLinks.forEach(function (link) {
 });
 
 // price Accordion
-const priceTitles = document.querySelectorAll(".price-title");
+const accordionTitles = document.querySelectorAll(".accordion-title");
 
-priceTitles.forEach(function (title) {
+accordionTitles.forEach(function (title) {
       title.addEventListener("click", function () {
-         const priceItem = title.parentElement;
-         priceItem.classList.toggle("active");
+         const accordionItem = title.parentElement;
+         accordionItem.classList.toggle("active");
       });
 });
 
 // works modal
 const worksButtons = document.querySelectorAll(".works-button");
-const worksModal = document.getElementById("worksModal");
-const worksVideo = document.getElementById("worksModalVideo");
-const worksClose = document.getElementById("worksModalClose");
+const modal = document.getElementById("modal");
+const modalVideo = document.getElementById("modalVideo");
+const modalClose = document.getElementById("modalClose");
 
 worksButtons.forEach(function (button) {
       button.addEventListener("click", function () {
          const videoUrl = button.dataset.video;
          const videoId = videoUrl.split("youtu.be/")[1].split("?")[0];
          const embedUrl = `https://www.youtube.com/embed/${videoId}`;
-         worksVideo.src = embedUrl;
+         modalVideo.src = embedUrl;
 
          const title = button.dataset.title;
          const artist = button.dataset.artist;
          const type = button.dataset.type;
          const concept = button.dataset.concept;
 
-         document.getElementById("worksModalTitle").textContent = title;
-         document.getElementById("worksModalArtist").textContent = artist;
-         document.getElementById("worksModalType").textContent = type;
-         document.getElementById("worksModalConcept").textContent = concept;
+         document.getElementById("modalTitle").textContent = title;
+         document.getElementById("modalArtist").textContent = artist;
+         document.getElementById("modalType").textContent = type;
+         document.getElementById("modalConcept").textContent = concept;
          
-         worksModal.classList.add("active");
+         modal.classList.add("active");
       });
 });
 
-worksClose.addEventListener("click", function () {
-      worksModal.classList.remove("active");
-      worksVideo.src = "";
+modalClose.addEventListener("click", function () {
+      modal.classList.remove("active");
+      modalVideo.src = "";
 });
 
-worksModal.addEventListener("click", function (e) {
-      if (e.target === worksModal) {
-         worksModal.classList.remove("active");
-         worksVideo.src = "";
+modal.addEventListener("click", function (e) {
+      if (e.target === modal) {
+         modal.classList.remove("active");
+         modalVideo.src = "";
       }
+});
+
+// Header
+fetch("/components/header.html")
+.then(response => response.text())
+.then(data => {
+    document.getElementById("header").innerHTML = data;
+});
+
+
+// Footer
+fetch("/components/footer.html")
+.then(response => response.text())
+.then(data => {
+    document.getElementById("footer").innerHTML = data;
 });

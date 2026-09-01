@@ -1,0 +1,17 @@
+/*-------------------------------- 
+   Variables
+---------------------------------*/
+:root {
+   
+   /*色*/
+   --color-base: #0F172A;
+   --color-main: #3F63C8;
+   --color-accent: #8AB4FF;
+   --color-white: #F8FAFC;
+
+   /*フォントサイズ*/
+   --font-small: 1rem;
+   --font-medium: 1.5rem;
+   --font-large: 2rem;
+
+}

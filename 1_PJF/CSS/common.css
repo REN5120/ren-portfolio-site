@@ -1,0 +1,174 @@
+/*-------------------------------- 
+   Base Styles
+---------------------------------*/
+
+body{
+   font-family: "Noto Serif", serif;
+   font-weight: 400;
+   font-size: var(--font-small);
+   line-height: 1.7;
+   color: var(--color-base);
+}
+
+img{
+   max-width: 100%;
+   display: block;
+}
+
+section{
+   padding: 4rem 0rem;
+}
+
+.section-title{
+   text-align: center;
+}
+.section-title h2{
+   font-size:1.2rem;
+   font-weight: 400;
+}
+.section-title p{
+   font-size: 0.8rem;
+}
+
+.container{
+   width: 100%;
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 0 1.5rem;
+}
+
+.text-center{
+   text-align: center;
+}
+
+/*-------------------------------- 
+   Header Styles 
+---------------------------------*/
+
+.header{
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 0.5rem;
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 100;
+   background-color: rgba(255, 255, 255, 0.8);
+}
+
+.header-logo img{
+   width: 40px;
+}
+
+/*-------------------------------- 
+   Navigation Styles
+---------------------------------*/
+
+.nav{
+   display: none;
+   position: absolute;
+   top: 100%;
+   left: 0;
+   width: 100%;
+   background-color: var(--color-white);
+}
+
+.nav.active{
+   display: block;
+}
+
+.nav ul{
+   list-style: none;
+}
+
+.nav a{
+   display: block;
+   padding: 1rem;
+   color: var(--color-base);
+   text-decoration: none;
+}
+
+/*-------------------------------- 
+   Navigation Styles
+---------------------------------*/
+
+.hamburger{
+   width: 40px;
+   height: 40px;
+   background-color: transparent;
+   border: none;
+}
+
+.hamburger span{
+   display: block;
+   width: 24px;
+   height: 2px;
+   background-color: var(--color-base);
+   margin: 5px auto;
+   transition: 0.3s;
+}
+
+/*-------------------------------- 
+   hamburger animation Styles
+---------------------------------*/
+
+.hamburger.active span:nth-child(1){
+   transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2){
+   opacity: 0;
+}
+
+.hamburger.active span:nth-child(3){
+   transform: translateY(-7px) rotate(-45deg);
+}
+
+/*-------------------------------- 
+   Footer Styles
+---------------------------------*/
+
+.footer{
+   padding:3rem 1rem;
+   background-color:var(--color-base);
+   color:var(--color-white);
+}
+
+.footer-logo{
+   display:flex;
+   justify-content:center;
+   align-items:center;
+   margin-bottom: 0rem;
+}
+
+.footer-logo img{
+   width: 120px;
+   height: auto;
+}
+
+.footer-nav{
+   margin-top:0rem;
+}
+
+.footer-nav ul{
+   list-style:none;
+   display:flex;
+   justify-content: center;
+   align-items:center;
+   gap:1rem;
+   flex-wrap: wrap;
+}
+.footer-nav a{
+   font-size: 0.9rem;
+   color:var(--color-white);
+   text-decoration:none;
+}
+
+.copyright{
+   margin-top:2.5rem;
+   text-align:center;
+   font-size:0.8rem;
+   opacity:0.8;
+}
