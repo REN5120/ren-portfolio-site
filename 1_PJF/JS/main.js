@@ -36,16 +36,19 @@ function setupHamburger() {
                   const targetId = link.getAttribute("href");
 
                   if(targetId.startsWith("/#")){
-                  window.location.href = targetId;
-                  }else{
-                  const target = document.querySelector(targetId);
-                  target.scrollIntoView({
-                        behavior:"smooth"
-                        });
-                  }
-                  
+                        const currentPage =  location.pathname;
+                        if(currentPage !== "/" || currentPage !== "/index.html"){
+                              const id = targetId.replace("/", "");
+                              const target = document.querySelector(id);
+                              target.scrollIntoView({ behavior: "smooth" });
+                        } else {
+                              window.location.href = targetId;
+                        }
+                        
+                        
             nav.classList.remove("active");
             hamburger.classList.remove("active");
+                  };
             });
       });
 }
