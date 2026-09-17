@@ -270,9 +270,21 @@
 
 .contact-button{
    display: inline-block;
-   margin-top: 2rem;
-   padding: 0.8rem 2rem;
-   background-color: white;
+   margin-top: 2.5rem;
+   padding: 0.5rem 2rem;
+   background-color: var(--color-white);
    color: var(--color-main);
+   margin:0.5rem;
+   text-decoration: none;
+}
+
+.contact-button-sub{
+   display: inline-block;
+   margin-top: 2.5rem;
+   padding: 0.5rem 2rem;
+   background-color: var(--color-main);
+   color: var(--color-white);
+   border: 1px solid var(--color-white);
+   margin:0.5rem;
    text-decoration: none;
 }
