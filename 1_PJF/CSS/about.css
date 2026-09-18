@@ -1,0 +1,199 @@
+/*-------------------------------- 
+	About Hero Styles
+---------------------------------*/
+.about-hero{
+	position: relative;
+	min-height: 65vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding: 5rem 1rem 4rem;
+	overflow: hidden;
+}
+
+.about-hero::before{
+	content: "";
+	position: absolute;
+	width: 260px;
+	height: 260px;
+	border: 1px solid var(--color-accent);
+	border-radius: 50%;
+	opacity: 0.35;
+}
+
+.about-hero::after{
+	content:"";
+	position:absolute;
+	width:250px;
+	height:250px;
+	background:url("/images/水彩インク素材＿色有.png");
+	background-size:contain;
+	background-repeat:no-repeat;
+	right:-80px;
+	bottom:-50px;
+	opacity:0.25;
+}
+
+.about-hero .container{
+	position: relative;
+	z-index: 1;
+}
+
+.about-hero h1{
+	font-size: var(--font-large);
+	font-weight: 400;
+	letter-spacing: 0.35em;
+}
+
+.about-hero p{
+	margin-top: 1.5rem;
+	font-size: var(--font-medium);
+	line-height: 1.8;
+}
+
+/*-------------------------------- 
+	Story Styles
+---------------------------------*/
+
+.about-text{
+	max-width: 680px;
+	margin: 3rem auto 0;
+	text-align: left;
+	line-height: 2;
+}
+
+.about-text p + p{
+	margin-top: 2rem;
+}
+
+/*-------------------------------- 
+	Philosophy Styles
+---------------------------------*/
+
+.philosophy-list{
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+	margin-top: 3rem;
+}
+
+.philosophy-item{
+	position:relative;
+	padding:1.5rem 0;
+	background:none;
+	box-shadow:none;
+	border-bottom:1px solid rgba(15,23,42,0.1);
+}
+
+.philosophy-item::before{
+	content:"";
+	position:absolute;
+	left:0;
+	top:1.8rem;
+	width:30px;
+	height:1px;
+	background-color:var(--color-accent);
+}
+
+.philosophy-item h3{
+	padding-left:2rem;
+}
+
+.philosophy-item p,
+.strength-item p{
+	margin-top: 0.75rem;
+	font-size: 0.9rem;
+}
+
+/*-------------------------------- 
+	Strength Styles
+---------------------------------*/
+.strength-list{
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	margin-top: 3rem;
+}
+
+.strength-item{
+	position: relative;
+	padding-left: 1.2rem;
+	border-left: 2px solid var(--color-accent);
+}
+
+/*-------------------------------- 
+	Profile Styles
+---------------------------------*/
+.about-profile{
+	background-color: rgba(138, 180, 255, 0.12);
+}
+
+.profile-content{
+	max-width: 520px;
+	margin: 3rem auto 0;
+	text-align: center;
+}
+
+.profile-content h3{
+	font-size: var(--font-large);
+	font-weight: 400;
+	letter-spacing: 0.2em;
+}
+
+.profile-content p{
+	margin-top: 0.5rem;
+}
+
+.profile-content ul{
+	display: flex;
+	justify-content: center;
+	gap: 0.5rem 1rem;
+	flex-wrap: wrap;
+	margin-top: 2rem;
+	padding: 0;
+	list-style: none;
+	font-size: 0.9rem;
+}
+
+/*-------------------------------- 
+	Message Styles
+---------------------------------*/
+.about-message{
+	text-align: center;
+}
+
+.about-message > .container > p{
+	margin-top: 3rem;
+	font-size: var(--font-medium);
+}
+
+.about-cta{
+	margin-top: 1.5rem;
+}
+
+.about-cta .contact-button,
+.about-cta .contact-button-sub{
+	margin-top: 0.5rem;
+}
+
+@media (min-width: 768px){
+	.about-hero h1{
+		font-size: 2.5rem;
+	}
+
+	.philosophy-list,
+	.strength-list{
+		flex-direction: row;
+		align-items: stretch;
+	}
+
+	.philosophy-item,
+	.strength-item{
+		flex: 1;
+	}
+
+	.strength-item + .strength-item{
+		margin-left: 1rem;
+	}
+}
