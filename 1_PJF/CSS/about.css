@@ -176,24 +176,3 @@
 .about-cta .contact-button-sub{
 	margin-top: 0.5rem;
 }
-
-@media (min-width: 768px){
-	.about-hero h1{
-		font-size: 2.5rem;
-	}
-
-	.philosophy-list,
-	.strength-list{
-		flex-direction: row;
-		align-items: stretch;
-	}
-
-	.philosophy-item,
-	.strength-item{
-		flex: 1;
-	}
-
-	.strength-item + .strength-item{
-		margin-left: 1rem;
-	}
-}

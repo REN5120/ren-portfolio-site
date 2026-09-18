@@ -1,36 +1,36 @@
 .btn{
    display: inline-block;
-   padding: 0.8rem 2rem;
-   background-color: var(--color-accent);
-   color: black;
+   padding: 0.5rem 2rem;
    text-decoration: none;
-   border-radius: 999px;
+   border-radius: 4px;
    margin: 0.5rem;
    cursor: pointer;
 }
 
-.btn-sub{
-   display: inline-block;
-   padding: 0.8rem 2rem;
+.btn-primary{
+   background-color: var(--color-accent);
+   border: 1px solid var(--color-white);
+   color: black;
+}
+
+.btn-secondary{
    background-color: var(--color-white);
    border: 1px solid var(--color-accent);
    color: black;
-   text-decoration: none;
-   border-radius: 999px;
-   margin: 0.5rem;
-   cursor: pointer;
 }
 
 .card{
    width: 100%;
    max-width: 320px;
    background-color: var(--color-white);
-   border-radius: 20px;
+   border-radius: var(--radius);
    overflow: hidden;
-   box-shadow: 3px 6px 10px rgba(15,23,42,0.08);
+   box-shadow: var(--shadow);
 }
 
-/*Modal Styles*/
+/*-------------------------------- 
+   Modal Styles
+---------------------------------*/
 
 .modal{
    opacity: 0;
@@ -58,13 +58,13 @@
    max-width: 900px;
    background-color: var(--color-white);
    padding: 1rem;
-   border-radius: 12px;
+   border-radius: var(--radius);
 }
 
 .modal-content iframe{
    width: 100%;
    aspect-ratio: 16/9;
-   border-radius: 12px;
+   border-radius: var(--radius);
 }
 
 .close{
@@ -97,7 +97,7 @@
    border: none;
    font-size: 1.1rem;
    color: var(--color-white);
-   box-shadow: 3px 6px 10px rgba(15,23,42,0.08);
+   box-shadow: var(--shadow);
    margin-bottom: 0.5rem;
 }
 

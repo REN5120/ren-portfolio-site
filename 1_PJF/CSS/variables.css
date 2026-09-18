@@ -9,9 +9,22 @@
    --color-accent: #8AB4FF;
    --color-white: #F8FAFC;
 
+   /* RGB（透明度調整用） */
+   --rgb-base:15,23,42;
+   --rgb-main:63,99,200;
+   --rgb-accent:138,180,255;
+   --rgb-white:248,250,252;
+
+
    /*フォントサイズ*/
    --font-small: 1rem;
    --font-medium: 1.5rem;
    --font-large: 2rem;
+
+   /*シャドウ*/
+   --shadow: 3px 6px 10px rgba(15,23,42,0.08);
+
+   /*丸み*/
+   --radius: 20px;
 
 }
