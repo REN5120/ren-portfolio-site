@@ -1,0 +1,38 @@
+/*--------------------------------
+   Preparing Styles
+--------------------------------*/
+
+.preparing{
+    min-height:70vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+
+.preparing-content{
+    max-width:500px;
+}
+
+
+.preparing-content h1{
+    font-size:var(--font-large);
+    letter-spacing:0.3em;
+}
+
+
+.preparing-lead{
+    margin-top:2rem;
+    font-size:var(--font-medium);
+}
+
+
+.preparing-content p + p{
+    margin-top:1.5rem;
+}
+
+
+.preparing-content .btn{
+    margin-top:3rem;
+}

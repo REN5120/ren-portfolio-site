@@ -23,32 +23,44 @@ function setupHamburger() {
       const nav = document.getElementById("nav");
 
       hamburger.addEventListener("click", function () {
-      nav.classList.toggle("active");
-      hamburger.classList.toggle("active");
+            nav.classList.toggle("active");
+            hamburger.classList.toggle("active");
       });
 
       const navLinks = document.querySelectorAll(".nav a");
 
       navLinks.forEach(function (link) {
             link.addEventListener("click", function (e) {
-                  e.preventDefault();
-
                   const targetId = link.getAttribute("href");
 
                   if(targetId.startsWith("/#")){
-                        const currentPage =  location.pathname;
-                        if(currentPage !== "/" || currentPage !== "/index.html"){
+
+                        e.preventDefault();
+
+                        const currentPage = location.pathname;
+
+                        if(currentPage === "/" || currentPage === "/index.html"){
+
                               const id = targetId.replace("/", "");
                               const target = document.querySelector(id);
-                              target.scrollIntoView({ behavior: "smooth" });
-                        } else {
+
+                              if(target){
+                                    target.scrollIntoView({
+                                          behavior:"smooth"
+                                    });
+                              }
+
+                        }else{
+
                               window.location.href = targetId;
+
                         }
-                        
-                        
-            nav.classList.remove("active");
-            hamburger.classList.remove("active");
-                  };
+
+                  }
+
+                  nav.classList.remove("active");
+                  hamburger.classList.remove("active");
+
             });
       });
 }
